@@ -1,7 +1,4 @@
-# Windmill Studios - Coding Standards
-
-![C++ Standard](https://img.shields.io/badge/C%2B%2B-20-blue.svg?style=flat&logo=c%2B%2B)
-![Style](https://img.shields.io/badge/Style-Custom-orange)
+# Windmill Studios - Coding Style
 
 This repository contains the official coding style configuration, naming conventions, and formatting rules used across all **Windmill Studios** projects (Mistral Engine, Vendaval Editor, Floresta, etc.).
 
@@ -18,8 +15,8 @@ We use **clang-format** to automate visual styling (indentation, spacing, braces
 To ensure your project always uses the latest version of this standard, add the following to your main `CMakeLists.txt`:
 
 ```cmake
-set(STYLE_URL "[https://raw.githubusercontent.com/Windmill-Studio/Windmill-Standards/main/.clang-format](https://raw.githubusercontent.com/Windmill-Studio/Windmill-Standards/main/.clang-format)")
-set(LOCAL_STYLE_FILE "${CMAKE_SOURCE_DIR}/.clang-format")
+set(STYLE_URL "https://raw.githubusercontent.com/WindmillStudios/Coding-Style/refs/heads/main/.clang-format")
+set(LOCAL_STYLE_FILE "${CMAKE_CURRENT_LIST_DIR}/.clang-format")
 
 file(DOWNLOAD "${STYLE_URL}" "${LOCAL_STYLE_FILE}" SHOW_PROGRESS)
 ```
@@ -55,7 +52,7 @@ void UpdateEvent()
     }
 }
 
-// ❌ Incorrect (K&R / Java style)
+// ❌ Incorrect
 void UpdateEvent() {
     if (mIsActive) {
         DoSomething();
