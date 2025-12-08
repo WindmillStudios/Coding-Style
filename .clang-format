@@ -129,4 +129,3 @@ IncludeCategories:
   - Regex: '.*'
     Priority: 3
 IncludeIsMainRegex: '([-_](test|unittest))?$'
-...
